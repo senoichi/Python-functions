@@ -1,0 +1,21 @@
+import string
+
+a = list(string.ascii_uppercase)[0:24]
+
+#print a
+alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X']
+
+def alpbt(int):
+	
+	alpha = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X','Y','Z']
+
+	return alpha[int]
+
+def print_sen (*word):
+	sentance = ""
+	for i in range(len(word)):
+		sentance = sentance+''+word[i]
+	print sentance 
+
+
+
