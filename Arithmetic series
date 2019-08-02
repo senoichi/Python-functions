@@ -5,3 +5,8 @@ def SimpleAdding(num):
         num = num - 1
     return sum
 print SimpleAdding(raw_input())
+
+
+def SimpleAdding(num): 
+    return sum(range(1, num + 1))
+print SimpleAdding(raw_input())
