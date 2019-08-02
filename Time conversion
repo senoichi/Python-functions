@@ -1,0 +1,12 @@
+
+def TimeConvert(num): 
+
+    h = int(num/60)
+    min = num % 60 
+    return str(h) + ':'+str(min)
+    
+# keep this function call here  
+print TimeConvert(raw_input())  
+
+
+  
