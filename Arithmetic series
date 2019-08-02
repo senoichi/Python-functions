@@ -1,0 +1,7 @@
+def SimpleAdding(num): 
+    sum = 0
+    for i in range(num):
+        sum = sum + num
+        num = num - 1
+    return sum
+print SimpleAdding(raw_input())
