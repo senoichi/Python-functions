@@ -1,0 +1,14 @@
+def KaprekarsConstant(num):
+    epoch = 0
+    while num != 6174:
+        num_arry = [digit for digit in str(num)]
+        zeros = ['0' for i in range(4-len(num_arry))]
+        num_arry = num_arry + zeros
+        x, y = int(''.join([i for i in sorted(num_arry)])), int(''.join([i for i in sorted(num_arry)])[::-1]) 
+        num = abs(x-y)
+        epoch = epoch + 1
+    return epoch
+           
+    
+# keep this function call here  
+print KaprekarsConstant(raw_input()) 
