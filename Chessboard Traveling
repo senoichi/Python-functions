@@ -1,0 +1,13 @@
+def ChessboardTraveling(x): 
+    str = [i for i in x]
+    n = int(str[6])+ int(str[8]) - int(str[1]) - int(str[3])
+    a = int(str[6]) - int(str[1])
+    b = int(str[8]) - int(str[3])
+    
+    def Fact(num): 
+        if num == 1:
+            return 1
+        else:
+            return num * Fact(num - 1)
+        
+    return Fact(n)/(Fact(a)*Fact(b))
