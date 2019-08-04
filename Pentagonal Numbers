@@ -1,0 +1,8 @@
+def PentagonalNumber(n): 
+    if n == 1:
+        return 1
+    else: 
+        return 5*(n-1) + PentagonalNumber(n-1)
+    
+# keep this function call here  
+print PentagonalNumber(raw_input())
