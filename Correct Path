@@ -1,0 +1,44 @@
+def CorrectPath(str):
+    def map(direction):
+        fin_str = []
+        for char in str:
+            if char == '?':
+                fin_str.append(direction)
+            else: 
+                fin_str.append(char)
+        return ''.join(fin_str)
+    r = 0
+    l = 0
+    u = 0
+    d = 0
+    #check change in position
+    for char in str:
+        if ord(char) == 114:
+            r = r + 1
+        elif ord(char) == 108:
+            l = l +1
+        elif ord(char) == 117:
+            u = u + 1
+        elif ord(char) == 100:
+            d = d + 1 
+    
+    #calc change position        
+    hori = r - l
+    vert = u - d
+    x, y = 1 + hori , 5 + vert
+    
+    #calc displacement from final position 
+    dis_x, dis_y = 5 - x, 1 - y
+    #return dis_x, hori
+    #Find '?'
+    if dis_x > 0:
+        return map('r')
+    elif dis_x < 0:
+        return map('l')
+    elif dis_y > 0:
+        return map('u')
+    elif dis_y < 0:
+        return map('d')
+    
+# keep this function call here  
+print CorrectPath(raw_input())
