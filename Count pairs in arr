@@ -1,0 +1,14 @@
+# Complete the sockMerchant function below.
+def sockMerchant(n, ar):
+    count = 0
+    ord_ar = sorted(ar)
+    #paired = zip(sorted(ar)[:-1],sorted(ar)[1:])
+    for i in range(len(ar)):
+        if i % 2 == 0:
+            p1 = ord_ar[i]
+        else:
+            p2 = ord_ar[i]
+            if p1 == p2:
+                count += 1
+                i+=1
+    return count 
