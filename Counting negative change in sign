@@ -1,0 +1,34 @@
+s = ['D','D','U','U','D','D','U','D','U','U','U','D']
+
+def countingValleys(n, s):
+    
+    #Metric for meausuring altitude
+    alt = {
+    'D' : -1,
+    'U' : 1,
+    }
+     
+    # height above/below sea level
+    h = 0
+    #Threshold at sea level
+    t = 0
+    
+    count = 0
+    
+    for step in s:
+        if t == 0 and alt[step] == -1:
+            count +=1
+
+        h += alt[step]
+        
+        if h != 0:
+            t = 1
+        else:
+            t = 0
+            
+        
+        
+    return count
+
+
+print (countingValleys(12,s))
